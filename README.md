@@ -1,3 +1,233 @@
+# WayoData
+
+
+## Description
+WayoData is a customizable platform that enales real-time monitoring of important data and metrics to inform better business decisons.
+
+
+## Wireframe
+![alt text](image.png)
+
+
+## User Stories
+1.    Users can create an account (with validations and error handling) to access the platform
+2.    Users can select from a tab or view the overview dashboard
+3.    Navbar has Overview, Users, Listings, Bookings, Reviews, and Accounts
+4.    Each of the 5 data tabs displays different data and charts
+5.    The Accounts tab shows the accounts that have access to the data dashboard
+6.    Users can edit, delete their accounts from the Accounts tab
+7.    Users can log out
+
+
+## React Tree Diagram
+![alt text](image-2.png)
+
+
+## Schema
+![alt text](image-3.png)
+
+
+## API Routes
+
+**User Routes**
+
+    GET /users: Retrieve a list of all users.
+    
+    GET /users/<id>: Retrieve a specific user by ID.
+
+**Listing Routes**
+    
+    GET /listings: Retrieve a list of all listsings.
+    
+    GET /listings/<id>: Retrieve a specific listing by ID.
+
+**Booking Routes**
+    
+    GET /bookings: Retrieve a list of all bookings.
+    
+    GET /bookings/<id>: Retrieve a specific booking by ID.
+
+**Review Routes**
+    
+    GET /reviews: Retrieve a list of all reviews.
+    
+    GET /reviews/<id>: Retrieve a specific review by ID.
+
+**Data User Routes**
+
+    GET /datausers: Retrieve a list of all data users.
+    
+    POST /datausers: Create a new data user.
+    
+    GET /datausers/<id>: Retrieve a specific data user by ID.
+    
+    PATCH /datausers/<id>: Partially update a specific data user by ID.
+    
+    DELETE /datausers/<id>: Delete a specific data user by ID.
+
+
+## Stretch Goals
+1.    Add Settings for dark and light mode
+2.    Create admin account with admin permissions
+3.    Users can create new charts, edit existing charts, and delete charts
+4.    Users can search for charts (probably not necessary)
+
+
+## Kanban Board
+![alt text](image-1.png)
+https://trello.com/b/FFCrBFdu/phase-v-kanban
+
+
+## New Tech
+1.    Pandas Library
+2.    Plotly Library
+3.    CSS Package
+4.    Deploy
+5.    useContext for user permissions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Constraints
+
+- A
+- A
+
+## Validations
+
+- D
+- D
+
+## Prerequisites
+Before starting, make sure you have completed the following:
+
+    Git is installed.
+    
+    You have a GitHub account.
+    
+    Node.js and npm are installed.
+    
+    Python and pipenv are installed.
+    
+    Honcho is installed for managing Procfile-based applications.
+
+## Getting Started
+To set up a local instance, follow these steps:
+
+## Front-end Installation
+
+1. Clone the repository:
+
+   git clone git@github.com:maneandmoon/projectify.git
+
+3. Change to the root directory:
+
+   cd projectify
+
+4. Install npm packages:
+
+   npm install
+
+5. Move to the front-end directory:
+
+   cd client
+
+6. Install npm packages in the front-end directory:
+
+   npm install
+
+## Back-end Installation
+
+Make sure you are in the root directory of the project.
+
+1. Install pipenv and the necessary dependencies:
+
+   pipenv install
+
+3. Activate the virtual environment:
+
+   pipenv shell
+
+## Database Setup
+
+1. Navigate to the data directory:
+
+   cd server/Database-Imports
+
+3. Create a database file from the SQL file:
+
+   sqlite3 app.db < backup.sql
+
+4. Alternatively, you can create a migration environment by navigating to cd server and following these prompts to create two new directories--
+   instance and migrations, where app.db will be added to the instance directory.
+
+
+           flask db init
+
+           flask db migrate -m "Initial migration."
+
+           flask db upgrade
+
+           python seed.py
+
+    
+
+## Running the Application
+Ensure you are in the root directory of the project.
+
+Start the application using Honcho:
+
+    honcho start -f Procfile.dev
+
+## API Usage
+To interact with the API, send requests to the endpoints defined in your backend. For example:
+
+    curl -X GET http://localhost:3000
+
+Alternatively, use a tool like Postman to set the URL to your local server's API endpoint and make your desired requests.
+
+## Additional Notes
+Verify that your SQLite database file is correctly set up before starting the back-end server.
+
+
 # Phase 4 Full-Stack Application Project Template
 
 ## Learning Goals
