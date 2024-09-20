@@ -20,38 +20,14 @@ WayoData is a customizable platform that enales real-time monitoring of importan
 
 
 ## React Tree Diagram
-![alt text](image-2.png)
+![alt text](image-5.png)
 
 
 ## Schema
-![alt text](image-3.png)
+![alt text](image-4.png)
 
 
 ## API Routes
-
-**User Routes**
-
-    GET /users: Retrieve a list of all users.
-    
-    GET /users/<id>: Retrieve a specific user by ID.
-
-**Listing Routes**
-    
-    GET /listings: Retrieve a list of all listsings.
-    
-    GET /listings/<id>: Retrieve a specific listing by ID.
-
-**Booking Routes**
-    
-    GET /bookings: Retrieve a list of all bookings.
-    
-    GET /bookings/<id>: Retrieve a specific booking by ID.
-
-**Review Routes**
-    
-    GET /reviews: Retrieve a list of all reviews.
-    
-    GET /reviews/<id>: Retrieve a specific review by ID.
 
 **Data User Routes**
 
@@ -65,12 +41,69 @@ WayoData is a customizable platform that enales real-time monitoring of importan
     
     DELETE /datausers/<id>: Delete a specific data user by ID.
 
+**Favorite Routes**
+
+    GET /favorites: Retrieve a list of all favorited widgets.
+    
+    POST /favorites: Add widget to favorites.
+    
+    DELETE /favorites/<id>: Remove a widget from favorites.
+
+**User Routes**
+
+    GET /users: Retrieve a list of all users.
+    
+    GET /users/<id>: Retrieve a specific user by ID.
+
+    GET /activeusers: Calculate active users.
+
+    GET /usersbyindustry: Calculate users by industry.
+
+    GET /retentionrate: Calculate retention rate.
+
+**Listing Routes**
+    
+    GET /listings: Retrieve a list of all listsings.
+    
+    GET /listings/<id>: Retrieve a specific listing by ID.
+
+    GET /activelistings: Calculate active listings.
+
+    GET /listingsbytype: Calculate listings by type.
+
+    GET /listingsbyspacetype: Calculate listings by space type.
+
+    GET /pricescatter: Get data for price scatter.
+
+**Booking Routes**
+    
+    GET /bookings: Retrieve a list of all bookings.
+    
+    GET /bookings/<id>: Retrieve a specific booking by ID.
+
+    GET /bookingsperday: Calculate bookings per day.
+
+    GET /averagebookprice: Calculate average booking price.
+
+**Review Routes**
+    
+    GET /reviews: Retrieve a list of all reviews.
+    
+    GET /reviews/<id>: Retrieve a specific review by ID.
+
+    GET /activeusers: Calculate active users.
+
+    GET /usersbyindustry: Calculate users by industry.
+
+    GET /locationbystars: Calculate locations by stars.
+
+    GET /reviewperbooking: Calculate review per booking ratio.
+
 
 ## Stretch Goals
 1.    Add Settings for dark and light mode
-2.    Create admin account with admin permissions
-3.    Users can create new charts, edit existing charts, and delete charts
-4.    Users can search for charts (probably not necessary)
+2.    Use visualization tools for charts
+3.    Users can view underlying data
 
 
 ## Kanban Board
