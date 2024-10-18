@@ -72,7 +72,7 @@ class Listing(db.Model, SerializerMixin):
     __tablename__ = 'listings'
 
     id = db.Column(db.Integer, primary_key=True)
-    business_id = db.Column(db.Integer, db.db.ForeignKey('businesses.id'))
+    business_id = db.Column(db.Integer, db.ForeignKey('businesses.id'))
     listing_type = db.Column(db.String, nullable=False)
     space_type = db.Column(db.String)
     start_time = db.Column(db.Date)
