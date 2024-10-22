@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from flask_cors import CORS
-from flask import request, make_response
 from flask import request, session, make_response
 from flask_restful import Resource
 # from flask_bcrypt import Bcrypt
@@ -37,11 +36,18 @@ class Signup(Resource):
     
 class CheckSession(Resource):
     def get(self):
-        user_id = session['user_id']
-        if user_id:
-            cur_user = DataUser.query.filter_by(id=user_id).first()
-            return make_response(cur_user.to_dict(), 200)
-        return make_response({'message': 'no one is logged in'}, 401)
+        user = DataUser.query.filter(DataUser.id == session.get('user_id')).first()
+        if user:
+            return make_response(user.to_dict())
+        else:
+            return make_response({'message': '401: Not Logged In'}, 401)
+        
+    # def get(self):
+    #     user_id = session['user_id']
+    #     if user_id:
+    #         cur_user = DataUser.query.filter_by(id=user_id).first()
+    #         return make_response(cur_user.to_dict(), 200)
+    #     return make_response({'message': 'no one is logged in'}, 401)
     
 
 class Login(Resource):
@@ -78,4 +84,3 @@ api.add_resource(Logout, '/logout', endpoint='logout')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
-
